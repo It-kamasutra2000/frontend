@@ -1,0 +1,8 @@
+.post_form {
+  margin: auto;
+  display: flex;
+  padding-top: 100px;
+  width: 35%;
+  justify-content: space-between;
+  padding-bottom: 50px;
+}

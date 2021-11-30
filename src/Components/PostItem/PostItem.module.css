@@ -1,0 +1,13 @@
+.post {
+  margin: 0 20px 20px 0;
+  position: relative;
+}
+
+.edite,
+.close {
+  position: absolute;
+  top: 0;
+  font-size: 20px;
+  right: 0;
+  cursor: pointer;
+}

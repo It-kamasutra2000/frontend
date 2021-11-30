@@ -1,0 +1,13 @@
+.header {
+  height: 50px;
+  width: 100%;
+  background: white;
+  display: flex;
+  justify-content: flex-end;
+  padding-right: 50px;
+  align-items: center;
+}
+
+.userName {
+  margin: 0 10px 0 0;
+}
