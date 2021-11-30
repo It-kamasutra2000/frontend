@@ -6,7 +6,7 @@ import styles from "./PostItem.module.css";
 import postsStore from "../../store/posts_store";
 import { onHandleChangeCreator } from "../../utils/chagne_util";
 
-const PostItem: FC<IPostItem> = ({ post, onHandleDeletePost }) => {
+const PostItem: FC<IPostItem> = ({ post }) => {
   const [editMode, setEditeMode] = useState<boolean>(false);
 
   const [fieldValue, setFieldValue] = useState<IFieldValues>({
@@ -14,10 +14,15 @@ const PostItem: FC<IPostItem> = ({ post, onHandleDeletePost }) => {
     body: "",
   });
 
+  const deletePost = postsStore.deletePost;
   const onHandleChange = onHandleChangeCreator(setFieldValue, fieldValue);
 
   const onHandleActiveEditeMode = () => {
     setEditeMode(true);
+  };
+
+  const onHandleDeletePost = (id: string) => {
+    deletePost(id);
   };
 
   const onHandleDeActiveEditeMode = (id: string) => {

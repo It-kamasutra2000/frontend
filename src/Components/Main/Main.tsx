@@ -16,7 +16,6 @@ const Main: FC = () => {
 
   useEffect(() => {
     if (!isAuth) {
-      console.log("FDDF");
       navigate("/login");
     }
   }, [isAuth]);

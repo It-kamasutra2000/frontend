@@ -47,7 +47,7 @@ class PostsStore {
       if (!result.data.success) {
         throw new Error(result.data.message);
       }
-      this.getPosts();
+      await this.getPosts();
     } catch ({ message }) {
       this.error = message as string;
     } finally {
@@ -62,7 +62,7 @@ class PostsStore {
       if (!result.data.success) {
         throw new Error(result.data.message);
       }
-      this.getPosts();
+      await this.getPosts();
     } catch ({ message }) {
       this.error = message as string;
     } finally {

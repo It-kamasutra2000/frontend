@@ -12,13 +12,6 @@ const PostsListe: FC = () => {
   const isFetching = postsStore.isFetching;
   const posts = postsStore.posts;
 
-  // actions
-  const deletePost = postsStore.deletePost;
-
-  const onHandleDeletePost = (id: string) => {
-    deletePost(id);
-  };
-
   if (isFetching) return <Loader />;
 
   if (!posts.length) return <NoPosts />;
@@ -26,7 +19,7 @@ const PostsListe: FC = () => {
   return (
     <div className={styles.posts}>
       {posts.map((post) => {
-        return <PostItem post={post} onHandleDeletePost={onHandleDeletePost} />;
+        return <PostItem post={post} />;
       })}
     </div>
   );
